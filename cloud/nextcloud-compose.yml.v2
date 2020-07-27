@@ -44,10 +44,10 @@ services:
       - /data/nextcloud/mysql:/var/lib/mysql
       - /etc/localtime:/etc/localtime:ro
     environment:
-      - MYSQL_ROOT_PASSWORD=NEv3rl5B3atSBFIA1917J3nkinS
-      - MYSQL_PASSWORD=NEv3rli5B3atSBFIaA1917
+      - MYSQL_ROOT_PASSWORD=PASSWORD
+      - MYSQL_PASSWORD=PASSWORD
       - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=bitscloud
+      - MYSQL_USER=cloud
     restart: unless-stopped
 
   nextcloud-app:
@@ -68,9 +68,9 @@ services:
       - /data/nextcloud/resources:/var/www/html/resources
       - /etc/localtime:/etc/localtime:ro
     environment:
-      - VIRTUAL_HOST=drive.bitsbeat.com
-      - LETSENCRYPT_HOST=drive.bitsbeat.com
-      - LETSENCRYPT_EMAIL=shramik.awale@bitsbeat.com
+      - VIRTUAL_HOST=drive.cloud.com
+      - LETSENCRYPT_HOST=drive.cloud.com
+      - LETSENCRYPT_EMAIL=shramik.awale@cloud.com
     restart: unless-stopped
 
   collabora:
@@ -86,14 +86,14 @@ services:
     ports:
       - 9980:9980
     environment:
-      - domain=drive\\.bitsbeat\\.com
+      - domain=drive\\.cloud\\.com
       - username=admin
-      - password=NEv3rl5B3atSBFIA1917J3nkinS
+      - password=PASSWORD
       - VIRTUAL_PROTO=https
       - VIRTUAL_PORT=443
-      - VIRTUAL_HOST=office.bitsbeat.com
-      - LETSENCRYPT_HOST=office.bitsbeat.com
-      - LETSENCRYPT_EMAIL=shramik.awale@bitsbeat.com
+      - VIRTUAL_HOST=office.cloud.com
+      - LETSENCRYPT_HOST=office.cloud.com
+      - LETSENCRYPT_EMAIL=shramik.awale@cloud.com
     restart: unless-stopped
     volumes:
       - nextcloud-app
