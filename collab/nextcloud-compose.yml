@@ -12,14 +12,14 @@ services:
     ports:
       - 127.0.0.1:9980:9980
     environment:
-      - domain=drive\\.bitsbeat\\.com
+      - domain=drive\\.cloud\\.com
       - username=admin
       - password=PASSWORD-EXAMPLE
       - VIRTUAL_PROTO=https
       - VIRTUAL_PORT=443
-      - VIRTUAL_HOST=office.bitsbeat.com
-      - LETSENCRYPT_HOST=office.bitsbeat.com
-      - LETSENCRYPT_EMAIL=shramik.awale@bitsbeat.com
+      - VIRTUAL_HOST=office.cloud.com
+      - LETSENCRYPT_HOST=office.cloud.com
+      - LETSENCRYPT_EMAIL=shramik.awale@cloud.com
     restart: unless-stopped
 
 networks:
