@@ -84,7 +84,7 @@ services:
     ports:
       - 9980:9980
     environment:
-      - domain=drive\\.bitsbeat\\.com
+      - domain=drive\\.cloud\\.com
       - username=admin
       - password=password
       - VIRTUAL_PROTO=https
